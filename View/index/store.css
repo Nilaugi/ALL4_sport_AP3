@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: white;
+    min-height: 100vh;
+}
+
+header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    padding: 40px 100px; 
+    z-index: 100000;
+}
+
+header.sticky {
+    padding: 5px 100px;
+    background: #f58426;
+}
+
+header .logo {
+    position: relative; 
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0,6s;    
+}
+
+header ul {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li {
+    position: relative; 
+    list-style: none;
+}
+
+header ul li a {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 500px;
+    transition: 0.6s;
+}
+
+header .sticky ul li a {
+    color: #fff;
+}
+
+.banner {
+  z-index: 10000;
+}
+
+.showcase
+{
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  transition: 0.5s;
+  z-index: 10000;
+}
+
+.showcase.active
+{
+  right: 300px;
+  z-index: 100;
+}
+
+.showcase img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.8;
+}
+  
+.overlay
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: overlay;
+}
+.text
+{
+  position: relative;
+  z-index: 10;
+}
+
+.text h2
+{
+  font-size: 5em;
+  font-weight: 800;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text h3
+{
+  font-size: 4em;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+.text p
+{
+  font-size: 1.1em;
+  color: #fff;
+  margin: 20px 0;
+  font-weight: 400;
+  max-width: 700px;
+}
+.text a
+{
+  display: inline-block;
+  font-size: 1em;
+  background: #f58426;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: 10px;
+  color: #fff;
+  letter-spacing: 2px;
+  transition: 0.2s;
+}
+.text a:hover
+{
+  letter-spacing: 6px;
+}
+
+.separation {
+  padding-top: 53%;
+}
+
+.search{
+  margin: auto;
+  width: 60%;
+  padding-bottom: 1%;
+}
+
+.search input,button{
+  width:75%;
+  border:2px solid #f58426;
+  border-right:0px;
+  font-size: 18px;
+  padding:12px;
+  background-color: transparent;
+  color:white;
+}
+
+.search input:hover{
+  opacity: .8;
+}
+
+.search button{
+  width:25%;
+  background-color: #f58426;
+  color:white;
+  transition: all 0.3s;
+  float: right;
+  border-left:0px;
+}
+
+.search button:hover{
+  opacity: .8;
+}
+
+#img_recherche{
+  margin-right:15%;
+  width: 15%;
+  height: 15%;
+  float: left; 
+}
+
+.container {
+  margin-left: 7.5%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.container a {
+  position: relative; 
+  width:300px;
+  height: 55px;
+  text-align: center;
+  line-height: 55px;
+  margin: 10px;
+  text-transform: uppercase;
+  background: #f58426;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  letter-spacing: 2px;
+  overflow: hidden;
+}
+
+.container a span {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 100000;
+  transition: 0s ease-in; 
+}
+
+.container a:hover span {
+  transition: 0.4s ease-in;
+  transform: translateY(-100%);
+}
+
+.container a:before {
+  content: '';
+  position: absolute;
+  bottom: 250px; 
+  left: 50px;
+  transform: translateX(-50%);
+  width: 250px;
+  height: 250px;
+  background: #f58426;
+  border-radius: 50%;
+  transition: 0.4s ease-in;
+}
+
+.container a:hover::before {
+  bottom: -150px;
+}
